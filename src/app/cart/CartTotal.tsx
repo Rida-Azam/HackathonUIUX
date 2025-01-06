@@ -1,4 +1,3 @@
-'use client';
 
 const CartTotal = ({ products }) => {
   const subTotal = products.reduce(

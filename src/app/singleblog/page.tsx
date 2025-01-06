@@ -56,12 +56,14 @@ function SingleBlog() {
             <div className="flex flex-col items-start mb-12">
               {/* Image Section */}
               <div className="w-full mb-4">
-                <img
-                  src={"/assets/images/blogp1.png"}
-                  alt={"Mauris at orci non vulputate consequat nec."}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
+  <Image
+    src="/assets/images/blogp1.png"
+    alt="Mauris at orci non vulputate consequat nec."
+    width={800} // Adjust width as needed
+    height={400} // Adjust height as needed
+    className="rounded-lg"
+  />
+</div>
 
               {/* Text Content Section */}
               <div className="w-full">
