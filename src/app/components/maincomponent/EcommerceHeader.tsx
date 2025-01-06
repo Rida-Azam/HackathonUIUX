@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTh, FaList } from "react-icons/fa";
+import { FaList } from "react-icons/fa";
 import { IoGrid } from "react-icons/io5";
 
 const EcommerceHeader = () => {

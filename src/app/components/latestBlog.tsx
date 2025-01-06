@@ -41,37 +41,40 @@ function LatestBlog() {
         <h2 className="text-2xl font-bold text-textcontact font-josefin text-center mb-8">
           Latest Blog
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {blogs.map((blog) => (
             <div
               key={blog.id}
               className="bg-white rounded-md shadow-lg overflow-hidden max-w-xs mx-auto"
             >
               {/* Blog Image */}
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full h-56 object-cover"
-              />
+              <div className="w-full h-56 relative">
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
               {/* Blog Content */}
               <div className="p-4">
                 <div className="flex items-center text-sm mb-2">
                   <span className="flex items-center text-textcontact font-medium mr-4">
                     <Image
-                      src={'/assets/icons/pen.png'}
-                      height={16}
-                      width={16}
+                      src="/assets/icons/pen.png"
                       alt="Pen Icon"
+                      width={16}
+                      height={16}
                       className="mr-2"
                     />
                     {blog.category}
                   </span>
                   <span className="flex items-center text-textcontact font-medium">
                     <Image
-                      src={'/assets/icons/cal.png'}
-                      height={16}
-                      width={16}
+                      src="/assets/icons/cal.png"
                       alt="Calendar Icon"
+                      width={16}
+                      height={16}
                       className="mr-2"
                     />
                     {blog.date}
@@ -97,28 +100,3 @@ function LatestBlog() {
 }
 
 export default LatestBlog;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// function LatestBlog() {
-//   return (
-//     <div> <h2 className="text-2xl font-bold text-textcontact font-josefin text-center mb-8 mt-4">
-//     Leatest Blog
-//     </h2></div>
-//   );
-// }
-
-// export default LatestBlog;

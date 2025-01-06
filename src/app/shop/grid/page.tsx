@@ -2,7 +2,7 @@ import EcommerceHeader from '@/app/components/maincomponent/EcommerceHeader'
 import LastImage from '@/app/components/maincomponent/lastimage'
 import Sameheader from '@/app/components/maincomponent/sameheader'
 import React from 'react'
-import { BsCart2, BsStarHalf } from 'react-icons/bs';
+import { BsCart2 } from 'react-icons/bs';
 import { FaSearchPlus, FaStar } from 'react-icons/fa';
 import Image from 'next/image';
 import { LuHeart } from 'react-icons/lu';
@@ -158,26 +158,4 @@ function ShopList() {
 
 export default ShopList
 
-
-
-
-
-
-
-
-
-
-
-// {/* Hover Icons */}
-//               <div className="absolute left-4 bottom-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-//                 <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer transition-transform duration-300 hover:scale-110">
-//                   <BsCart2 className="text-blue text-lg" />
-//                 </div>
-//                 <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer transition-transform duration-300 hover:scale-110">
-//                   <LuHeart className="text-blue text-lg" />
-//                 </div>
-//                 <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 cursor-pointer transition-transform duration-300 hover:scale-110">
-//                   <FaSearchPlus className="text-blue text-lg" />
-//                 </div>
-//               </div>
           

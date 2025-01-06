@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineUser, AiOutlineMail, AiOutlineComment, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineMail, AiOutlineComment } from "react-icons/ai";
 
 function Coment() {
   return (

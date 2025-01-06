@@ -1,13 +1,13 @@
 import React from 'react';
 import LastImage from './lastimage';
-
+import Image from 'next/image';
 function BlogComp() {
   const posts = [
     {
       id: 1,
       title: 'Mauris at orci non vulputate consequat nec.',
-      date: '12 Oct 2023',
-      comments: '5 Comments',
+      date: 'Aug 09 2020',
+      name: 'Surf Auxion',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare...',
       image: '/assets/images/blogp1.png',
@@ -15,8 +15,8 @@ function BlogComp() {
     {
       id: 2,
       title: 'Aenean vitae in aliquam ultricies lectus. Etiam.',
-      date: '14 Oct 2023',
-      comments: '3 Comments',
+      date: 'Aug 09 2020',
+      name: 'Surf Auxion',
       description:
         'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper...',
       image: '/assets/images/blogp2.png',
@@ -24,8 +24,8 @@ function BlogComp() {
     {
       id: 3,
       title: 'Sit nam congue feugiat nisl, mauris amet nisi.',
-      date: '15 Oct 2023',
-      comments: '7 Comments',
+      date: 'Aug 09 2020',
+      name: 'Surf Auxion',
       description:
         'Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna...',
       image: '/assets/images/blogp3.png',
@@ -50,9 +50,34 @@ function BlogComp() {
 
           {/* Text Content Section */}
           <div className="w-full">
-            <p className="text-gray-500 text-sm mb-2">
-              {post.date} • {post.comments}
-            </p>
+             <div className="flex items-center text-sm mb-2">
+                              <span className="flex items-center text-textcontact font-medium mr-4">
+                                <Image
+                                  src="/assets/icons/pen.png"
+                                  alt="Pen Icon"
+                                  width={16}
+                                  height={16}
+                                  className="mr-2"
+                                />
+                                <div className='bg-[#FFE7F9] px-8 py-1'>
+                                {post.name}
+                                </div>
+                             
+                              </span>
+                              <span className="flex items-center text-textcontact font-medium">
+                                <Image
+                                  src="/assets/icons/cal.png"
+                                  alt="Calendar Icon"
+                                  width={16}
+                                  height={16}
+                                  className="mr-2"
+                                />
+                                <div className='bg-[#FFE7F9] px-6 py-1'>
+                                {post.date}
+                                </div>
+                              </span>
+                            </div>
+            
             <h3 className="text-xl md:text-2xl font-bold mb-3">{post.title}</h3>
             <p className="text-gray-600 text-sm md:text-base mb-4">
               {post.description}

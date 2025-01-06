@@ -1,32 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import LastImage from "../components/maincomponent/lastimage";
 import Sidebar from "../blog/Sidebar";
-import BlogComp from "../components/maincomponent/blogComp";
 import Sameheader from "../components/maincomponent/sameheader";
 import Image from "next/image";
-import { BsCart2 } from "react-icons/bs";
-import { LuHeart } from "react-icons/lu";
 import { FaFacebookF, FaInstagram, FaLongArrowAltLeft, FaLongArrowAltRight, FaSearchPlus, FaStar, FaTwitter } from "react-icons/fa";
 import Post from "./Post";
 import Coment from "./Coment";
@@ -89,9 +65,33 @@ function SingleBlog() {
 
               {/* Text Content Section */}
               <div className="w-full">
-                <p className="text-gray-500 text-sm mb-2">
-                  {"12 Oct 2023"} • {"5 Comments"}
-                </p>
+               <div className="flex items-center text-sm mb-2">
+                                             <span className="flex items-center text-textcontact font-medium mr-4">
+                                               <Image
+                                                 src="/assets/icons/pen.png"
+                                                 alt="Pen Icon"
+                                                 width={16}
+                                                 height={16}
+                                                 className="mr-2"
+                                               />
+                                               <div className='bg-[#FFE7F9] px-8 py-1'>
+                                             Surf Auxion
+                                               </div>
+                                            
+                                             </span>
+                                             <span className="flex items-center text-textcontact font-medium">
+                                               <Image
+                                                 src="/assets/icons/cal.png"
+                                                 alt="Calendar Icon"
+                                                 width={16}
+                                                 height={16}
+                                                 className="mr-2"
+                                               />
+                                               <div className='bg-[#FFE7F9] px-6 py-1'>
+                                               Aug 09 2020
+                                               </div>
+                                             </span>
+                                           </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-3">
                   Mauris at orci non vulputate consequat nec.
                 </h3>

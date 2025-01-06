@@ -2,12 +2,12 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-xs">
+    <footer className="bg-[#EEEFFB] text-xs">
       {/* First Section: Logo, Subscribe, and Contact Information */}
-      <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12 bg-gray-100 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Logo and Subscribe */}
-          <div>
+          <div className="" >
             <h2 className="text-2xl font-bold mb-4">Hekto</h2>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-2 mb-4">
               <input
@@ -19,16 +19,16 @@ export default function Footer() {
                 SignUp
               </button>
             </div>
-            <p className="text-violet-400">
+            <p className="text-[#8A8FB9] font-lato text-sm leading-relaxed">
               Contact us: <br />
               17 Princess Road, London, Greater London NW1 8JR, UK
             </p>
           </div>
 
           {/* Categories */}
-          <div>
+          <div >
             <h3 className="font-bold text-lg mb-4">Categories</h3>
-            <ul className="space-y-2 text-violet-400">
+            <ul className="space-y-1 text-[#8A8FB9] font-lato text-sm">
               <li>Laptops & Computers</li>
               <li>Cameras & Photography</li>
               <li>Smart Phones & Tablets</li>
@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Customer Care */}
           <div>
             <h3 className="font-bold text-lg mb-4">Customer Care</h3>
-            <ul className="space-y-2 text-violet-400">
+            <ul className="space-y-1 text-[#8A8FB9] font-lato text-sm">
               <li>My Account</li>
               <li>Discount</li>
               <li>Returns</li>
@@ -52,7 +52,7 @@ export default function Footer() {
           {/* Pages */}
           <div>
             <h3 className="font-bold text-lg mb-4">Pages</h3>
-            <ul className="space-y-2 text-violet-400">
+            <ul className="space-y-1 text-[#8A8FB9] font-lato text-sm">
               <li>Blog</li>
               <li>Browse the Shop</li>
               <li>Category</li>
@@ -64,24 +64,22 @@ export default function Footer() {
       </div>
 
       {/* Second Section: Copyright and Social Media Icons */}
-      <div className="bg-slate-400 py-2 mt-8">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-8 sm:px-10 lg:px-12">
-          <p className="text-white text-sm">
-            © Hekto, All Rights Reserved
+      <div className="bg-[#E7E4F8] py-4 mt-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-8">
+          <p className="text-[#9DA0AE] font-lato text-sm font-semibold text-center sm:text-left mb-4 sm:mb-0">
+            © Webacy, All Rights Reserved
           </p>
-       
-          <div className="flex space-x-6 text-white">
-  <div className="bg-[#151875] w-10 h-10 flex items-center justify-center rounded-full hover:bg-violet-600 cursor-pointer">
-    <FaFacebookF />
-  </div>
-  <div className="bg-[#151875] w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 cursor-pointer">
-    <FaTwitter />
-  </div>
-  <div className="bg-[#151875] w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 cursor-pointer">
-    <FaInstagram />
-  </div>
-</div>
-
+          <div className="flex space-x-4 text-white">
+            <div className="bg-[#151875] w-8 h-8 flex items-center justify-center rounded-full hover:bg-violet-600 cursor-pointer">
+              <FaFacebookF />
+            </div>
+            <div className="bg-[#151875] w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 cursor-pointer">
+              <FaTwitter />
+            </div>
+            <div className="bg-[#151875] w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 cursor-pointer">
+              <FaInstagram />
+            </div>
+          </div>
         </div>
       </div>
     </footer>
