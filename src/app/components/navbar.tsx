@@ -61,7 +61,7 @@ function Navbar() {
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-sm font-lato text-textcolor">
             {/* Home Dropdown */}
             <li className="relative" ref={homeDropdownRef}>
-             <a href="/">
+             <Link href="/">
              <button
                
                className="flex items-center hover:text-[#FB2E86] transition-colors"
@@ -69,7 +69,7 @@ function Navbar() {
              >
                Home <IoIosArrowDown className="ml-1" />
              </button>
-             </a>
+             </Link>
               {isHomeDropdownOpen && (
                 <ul className="absolute top-full mt-2 bg-white shadow-md rounded-md text-black text-sm z-10">
                   <li className="px-4 py-2 hover:bg-gray-100">

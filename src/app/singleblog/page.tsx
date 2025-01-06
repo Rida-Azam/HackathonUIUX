@@ -3,7 +3,7 @@ import LastImage from "../components/maincomponent/lastimage";
 import Sidebar from "../blog/Sidebar";
 import Sameheader from "../components/maincomponent/sameheader";
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLongArrowAltLeft, FaLongArrowAltRight, FaSearchPlus, FaStar, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLongArrowAltLeft, FaLongArrowAltRight, FaStar, FaTwitter } from "react-icons/fa";
 import Post from "./Post";
 import Coment from "./Coment";
 

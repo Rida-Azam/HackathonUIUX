@@ -1,6 +1,7 @@
 import React from 'react';
 import LastImage from './lastimage';
 import Image from 'next/image';
+
 function BlogComp() {
   const posts = [
     {
@@ -35,49 +36,43 @@ function BlogComp() {
   return (
     <div className="container mx-auto px-4 py-8">
       {posts.map((post) => (
-        <div
-          key={post.id}
-          className="flex flex-col items-start mb-12"
-        >
+        <div key={post.id} className="flex flex-col items-start mb-12">
           {/* Image Section */}
           <div className="w-full mb-4">
-            <img
+            <Image
               src={post.image}
               alt={post.title}
-              className="w-full h-auto rounded-lg"
+              width={800} // Set the width
+              height={400} // Set the height
+              className="rounded-lg"
             />
           </div>
 
           {/* Text Content Section */}
           <div className="w-full">
-             <div className="flex items-center text-sm mb-2">
-                              <span className="flex items-center text-textcontact font-medium mr-4">
-                                <Image
-                                  src="/assets/icons/pen.png"
-                                  alt="Pen Icon"
-                                  width={16}
-                                  height={16}
-                                  className="mr-2"
-                                />
-                                <div className='bg-[#FFE7F9] px-8 py-1'>
-                                {post.name}
-                                </div>
-                             
-                              </span>
-                              <span className="flex items-center text-textcontact font-medium">
-                                <Image
-                                  src="/assets/icons/cal.png"
-                                  alt="Calendar Icon"
-                                  width={16}
-                                  height={16}
-                                  className="mr-2"
-                                />
-                                <div className='bg-[#FFE7F9] px-6 py-1'>
-                                {post.date}
-                                </div>
-                              </span>
-                            </div>
-            
+            <div className="flex items-center text-sm mb-2">
+              <span className="flex items-center text-textcontact font-medium mr-4">
+                <Image
+                  src="/assets/icons/pen.png"
+                  alt="Pen Icon"
+                  width={16}
+                  height={16}
+                  className="mr-2"
+                />
+                <div className="bg-[#FFE7F9] px-8 py-1">{post.name}</div>
+              </span>
+              <span className="flex items-center text-textcontact font-medium">
+                <Image
+                  src="/assets/icons/cal.png"
+                  alt="Calendar Icon"
+                  width={16}
+                  height={16}
+                  className="mr-2"
+                />
+                <div className="bg-[#FFE7F9] px-6 py-1">{post.date}</div>
+              </span>
+            </div>
+
             <h3 className="text-xl md:text-2xl font-bold mb-3">{post.title}</h3>
             <p className="text-gray-600 text-sm md:text-base mb-4">
               {post.description}

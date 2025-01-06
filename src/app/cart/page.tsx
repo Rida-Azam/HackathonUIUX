@@ -15,7 +15,7 @@ function CartPage() {
   ]);
 
   // Update quantity
-  const updateQuantity = (id:any, type:any) => {
+  const updateQuantity = (id:number, type: "increase" | "decrease") => {
     setProducts((prevProducts) =>
       prevProducts.map((product) =>
         product.id === id
@@ -34,7 +34,7 @@ function CartPage() {
   };
 
   // Remove product
-  const removeProduct = (id:any) => {
+  const removeProduct = (id:number) => {
     setProducts(products.filter((product) => product.id !== id));
   };
 

@@ -73,24 +73,6 @@ export default {
       clipPath: {
         'bottom-left': 'polygon(0 100%, 0 70%, 30% 100%)',
       },
-
-
-    //   colors: {
-    //     violet: {
-    //       custom: "#7E33E0", // A lighter variant of #7E33E0
-    //     },
-    //     blue: {
-    //       custom: "#0D0E43",
-    //     },
-    //     Pink: {
-    //       custom: "FB2E86",
-    //     },
-    //   },
-
-    //   fontFamily: {
-    //     josefin: ["'Josefin Sans'", "sans-serif"], // Add Josefin Sans
-    //     lato: ["'Lato'", "sans-serif"], // Add Lato
-    //   },
     },
   },
   plugins: [],

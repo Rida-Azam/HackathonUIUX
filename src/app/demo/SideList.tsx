@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function SideList() {
   const products = [
@@ -52,11 +53,13 @@ function SideList() {
           className="flex items-center border-b py-4 gap-4 last:border-b-0"
         >
           {/* Product Image */}
-          <div className="w-20 h-20 flex-shrink-0">
-            <img
+          <div className="w-20 h-20 flex-shrink-0 relative">
+            <Image
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover rounded-md"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-md"
             />
           </div>
 
