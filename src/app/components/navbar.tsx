@@ -13,7 +13,7 @@ function Navbar() {
 
   // Close dropdowns on clicking outside
   useEffect(() => {
-    const handleClickOutside = (event:any) => {
+    const handleClickOutside = (event) => {
       if (
         pagesDropdownRef.current &&
         !pagesDropdownRef.current.contains(event.target)

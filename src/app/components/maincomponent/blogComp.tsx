@@ -39,14 +39,14 @@ function BlogComp() {
         <div key={post.id} className="flex flex-col items-start mb-12">
           {/* Image Section */}
           <div className="w-full mb-4">
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={800} // Set the width
-              height={400} // Set the height
-              className="rounded-lg"
-            />
-          </div>
+  <Image
+    src="/assets/images/blogp1.png"
+    alt="Mauris at orci non vulputate consequat nec."
+    width={800} // Adjust width as needed
+    height={400} // Adjust height as needed
+    className="rounded-lg"
+  />
+</div>
 
           {/* Text Content Section */}
           <div className="w-full">
