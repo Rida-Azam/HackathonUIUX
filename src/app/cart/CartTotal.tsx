@@ -1,5 +1,13 @@
+type Product = {
+  price: number;
+  quantity: number;
+};
 
-const CartTotal = ({ products }) => {
+type CartTotalProps = {
+  products: Product[];
+};
+
+const CartTotal: React.FC<CartTotalProps> = ({ products }) => {
   const subTotal = products.reduce(
     (total, product) => total + product.price * product.quantity,
     0
