@@ -3,7 +3,19 @@ import { BsCart2 } from "react-icons/bs";
 import { FaSearchPlus } from "react-icons/fa";
 import { LuHeart } from "react-icons/lu";
 
-function LatestCard({ product}) {
+
+type Product = {
+  image: string;
+  name: string;
+  price: string;
+  oldPrice: string;
+};
+
+interface LatestCardProps {
+  product: Product;
+}
+
+function LatestCard({ product }: LatestCardProps) {
     return (
       <div className="relative group bg-g1 rounded-sm shadow-md overflow-hidden w-[300px] h-[300px]">
         {/* Product Image */}

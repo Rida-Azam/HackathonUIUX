@@ -8,21 +8,21 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isPagesDropdownOpen, setIsPagesDropdownOpen] = useState(false);
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
-  const pagesDropdownRef = useRef(null);
-  const homeDropdownRef = useRef(null);
+  const pagesDropdownRef = useRef<HTMLLIElement | null>(null);
+  const homeDropdownRef = useRef<HTMLLIElement | null>(null);
 
   // Close dropdowns on clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (
         pagesDropdownRef.current &&
-        !pagesDropdownRef.current.contains(event.target)
+        !pagesDropdownRef.current.contains(event.target as Node)
       ) {
         setIsPagesDropdownOpen(false);
       }
       if (
         homeDropdownRef.current &&
-        !homeDropdownRef.current.contains(event.target)
+        !homeDropdownRef.current.contains(event.target as Node)
       ) {
         setIsHomeDropdownOpen(false);
       }
@@ -44,7 +44,6 @@ function Navbar() {
 
         {/* Hamburger Menu for Mobile */}
         <button
-          
           className="md:hidden text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation menu"
@@ -61,21 +60,22 @@ function Navbar() {
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-sm font-lato text-textcolor">
             {/* Home Dropdown */}
             <li className="relative" ref={homeDropdownRef}>
-             <Link href="/">
-             <button
-               
-               className="flex items-center hover:text-[#FB2E86] transition-colors"
-               onClick={() => setIsHomeDropdownOpen(!isHomeDropdownOpen)}
-             >
-               Home <IoIosArrowDown className="ml-1" />
-             </button>
-             </Link>
+              <button
+                className="flex items-center hover:text-[#FB2E86] transition-colors"
+                onClick={() => setIsHomeDropdownOpen(!isHomeDropdownOpen)}
+                aria-expanded={isHomeDropdownOpen}
+                aria-controls="home-dropdown"
+              >
+                Home <IoIosArrowDown className="ml-1" />
+              </button>
               {isHomeDropdownOpen && (
-                <ul className="absolute top-full mt-2 bg-white shadow-md rounded-md text-black text-sm z-10">
+                <ul
+                  id="home-dropdown"
+                  className="absolute top-full mt-2 bg-white shadow-md rounded-md text-black text-sm z-10"
+                >
                   <li className="px-4 py-2 hover:bg-gray-100">
                     <Link href="/page">Pages</Link>
                   </li>
-                 
                 </ul>
               )}
             </li>
@@ -85,45 +85,50 @@ function Navbar() {
               <button
                 className="flex items-center hover:text-[#FB2E86] transition-colors"
                 onClick={() => setIsPagesDropdownOpen(!isPagesDropdownOpen)}
+                aria-expanded={isPagesDropdownOpen}
+                aria-controls="pages-dropdown"
               >
                 Pages
               </button>
               {isPagesDropdownOpen && (
-                <ul className="absolute top-full mt-2 bg-white shadow-md rounded-md text-black text-sm z-10">
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                <ul
+                  id="pages-dropdown"
+                  className="absolute top-full mt-2 bg-white shadow-md rounded-md text-black text-sm z-10"
+                >
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/shop">Shop Grid Default</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/shop/grid">ShopList</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/shop/sidebar">Shop Left Sidebar</Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/products">Product Detail</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/cart">Cart</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/ordercomplete">Order Completed</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/demo">Hekto</Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/login">Login</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/blog">Blog</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/singleblog">Single Blog</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/about">About Us</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100  text-xm">
+                  <li className="px-4 py-2 hover:bg-gray-100 text-xm">
                     <Link href="/contact-us">Contact Us</Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100">
@@ -191,6 +196,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
 

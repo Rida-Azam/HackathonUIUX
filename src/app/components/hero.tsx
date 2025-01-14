@@ -3,12 +3,11 @@ import Image from 'next/image';
 
 function Hero() {
   return (
-    <div className="relative w-full h-auto lg:h-[650px] bg-light flex flex-col lg:flex-row items-center justify-between px-4 lg:px-20">
-      {/* Hanging Lamp */}
-      {/* absolute top-0 left-0 lg:left-20 */}
-      <div className="absolute top-0 left-0 mb-6 lg:mb-0 lg:left-20">
+    <div className="relative w-full h-auto lg:h-[650px] bg-light px-4 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
+      {/* Hanging Lamp (Hidden on small screens) */}
+      <div className="absolute top-0 left-0 lg:left-20 hidden md:block">
         <Image
-          src="/assets/images/heroimg2.png" // Replace with the lamp image path
+          src="/assets/images/heroimg2.png"
           alt="Hanging Lamp"
           width={150}
           height={70}
@@ -34,31 +33,39 @@ function Hero() {
         </button>
       </div>
 
-      {/* Chair Image */}
-      {/* absolute top-10 right-0 lg:right-10 */}
-      <div className="absolute top-10 right-0 lg:right-10 ">
+      {/* Chair Image (Responsive Sizing) */}
+      <div className="absolute top-20 right-0 lg:right-10">
         <Image
-          src="/assets/images/heroimg1.png" // Replace with the chair image path
+          src="/assets/images/heroimg1.png"
           alt="Furniture Chair"
-          width={450}
-          height={600}
-          className="object-contain"
+          width={350} // Smaller width for small screens
+          height={450}
+          className="object-contain md:w-[400px] md:h-[500px] lg:w-[450px] lg:h-[600px]"
         />
       </div>
 
       {/* Background Circle */}
       <div className="absolute bottom-9 left-1/2 transform -translate-x-1/2">
-  <Image
-    src="/assets/images/herobg.png" // Replace with the image path
-    alt="Furniture Chair"
-    width={50}
-    height={50}
-    className="object-contain"
-  />
-</div>
-
+        <Image
+          src="/assets/images/herobg.png"
+          alt="Background Circle"
+          width={50}
+          height={50}
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 }
 
 export default Hero;
+
+
+
+
+
+
+
+
+
+
